@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Height:"
+        android:gravity="right"
+        android:id="@+id/YourHeight"
+        android:textSize="30sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/TxtHeight"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:textSize="30sp"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/YourHeight"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(centimeters)"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:layout_below="@+id/TxtHeight"
+        android:layout_toRightOf="@+id/YourHeight"
+        android:textStyle="bold"
+        android:id="@+id/CentimetersText"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="Your Weight:"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_below="@+id/CentimetersText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/YourWeight"
+        />
+
+    <EditText
+        android:id="@+id/TxtWeight"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/CentimetersText"
+        android:layout_toRightOf="@+id/YourWeight"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(kilograms)"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:layout_below="@+id/TxtWeight"
+        android:layout_toRightOf="@+id/YourWeight"
+        android:textStyle="bold"
+        android:id="@+id/KilogramText"
+        />
+<Button
+    android:id="@+id/BtnCalculate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="Compute BMI"
+    android:textSize="30sp"
+    android:textAllCaps="false"
+    android:layout_marginTop="20dp"
+    android:layout_below="@+id/KilogramText"
+    android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/TxtResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your BMI"
+        android:textSize="30sp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:layout_below="@+id/BtnCalculate"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/bmi_unit"
+        android:gravity="center"
+        android:layout_below="@+id/TxtResult"
+        android:textStyle="bold"/>
+</RelativeLayout>
